@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Firestore Map</title>
+  <style>
+    /* Make the map fill the whole page */
+    html, body {
+      height: 100%;
+      margin: 0;
+      padding: 0;
+    }
+    #map {
+      height: 100%;
+    }
+  </style>
+</head>
+<body>
+  <div id="map"></div>
+
+  <!-- Firebase SDKs (Compat versions) -->
+  <script src="https://www.gstatic.com/firebasejs/9.23.0/firebase-app-compat.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/9.23.0/firebase-firestore-compat.js"></script>
+
+  <!-- Firebase Config and Initialization -->
+  <script>
+    const firebaseConfig = {
+    apiKey: "AIzaSyAZguplbn0Iclxq9ifF_kkdAD_L4fKGGuc",
+    authDomain: "liveapptracker.firebaseapp.com",
+    projectId: "liveapptracker",
+    storageBucket: "liveapptracker.firebasestorage.app",
+    messagingSenderId: "138313329546",
+    appId: "1:138313329546:web:a80b473326f3136c0a3673",
+
+    };
+    firebase.initializeApp(firebaseConfig);
+  </script>
+
+  <!-- Your Marker Script -->
+  <script src="firebase-script.js"></script>
+
+  <!-- Google Maps API (must load *after* firebase-script.js) -->
+  <script async
+    defer
+    src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAZguplbn0Iclxq9ifF_kkdAD_L4fKGGuc&callback=initMap">
+  </script>
+</body>
+</html>
