@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Firestore Map</title>
+  <title>Gina's Trip</title>
   <style>
     /* Make the map fill the whole page */
     html, body {
@@ -17,6 +17,11 @@
   </style>
 </head>
 <body>
+    <div id="status-bar"></div>
+
+<button id="doneDrivingBtn">Done Driving for the Day</button>
+<button id="onTheRoadBtn">Back on the Road</button>
+
   <div id="map"></div>
 
   <!-- Firebase SDKs (Compat versions) -->
@@ -40,10 +45,8 @@
   <!-- Your Marker Script -->
   <script src="firebase-script.js"></script>
 
-  <!-- Google Maps API (must load *after* firebase-script.js) -->
-  <script async
-    defer
-    src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAZguplbn0Iclxq9ifF_kkdAD_L4fKGGuc&callback=initMap">
-  </script>
+ <!-- Load Google Maps script -->
+<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBKhQoNpOgGcov_PKTJ6mdvNfh9-ZGklD8&callback=initMap" async defer></script>
+
 </body>
 </html>
